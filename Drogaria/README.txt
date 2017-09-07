@@ -20,3 +20,16 @@ create table produto(codido integer primary key,
 
 select * from  fabricante;
 select * from  produto for update ;
+
+select * from fabricante
+
+create sequence s_codigo_fabricante start with 1
+;
+CREATE OR REPLACE TRIGGER drogaria.TBI_S_fabricante
+BEFORE INSERT
+ON drogaria.fabricante
+REFERENCING NEW AS NEW
+FOR EACH ROW
+BEGIN
+SELECT s_codigo_fabricante.NEXTVAL INTO :NEW.codigo FROM DUAL;
+END;

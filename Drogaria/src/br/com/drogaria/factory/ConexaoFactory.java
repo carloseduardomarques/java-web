@@ -15,7 +15,7 @@ public class ConexaoFactory {
 	Connection conexao = DriverManager.getConnection(URL, USUARIO, SENHA);
 
     return conexao;
-		
+    
 	}
 	
 	public static void main(String[] args) {
@@ -29,7 +29,6 @@ public class ConexaoFactory {
 	        System.out.println("Nao foi possivel realizar a conexao!");
 			ex.printStackTrace();	
 			}
-		}
-	
+		}	
 
 }
