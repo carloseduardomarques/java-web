@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	
+	<title>Projeto com Componentes</title>
+	
+</h:head>
+
+<h:body>
+
+	<h:outputText value="Exemplo de projeto com componentes" />
+
+	<h:form>
+
+		<h:panelGrid columns="2">
+
+			<h:outputLabel value="Nome:" />
+			<h:inputText maxlength="30" size="50" />
+
+			<h:outputLabel value="Senha:" />
+			<h:inputSecret maxlength="30" size="8" />
+
+			<h:outputLabel value="Observaçao:" />
+			<h:inputTextarea cols="30" rows="10" />
+
+			<h:outputLabel value="Interreses: " />
+
+			<h:selectManyCheckbox>
+
+				<f:selectItem itemValue="v" itemLabel="Viagem" />
+				<f:selectItem itemValue="c" itemLabel="Cinema" />
+				<f:selectItem itemValue="i" itemLabel="Internet" />
+				<f:selectItem itemValue="j" itemLabel="Jogos" />
+
+			</h:selectManyCheckbox>
+
+			<h:outputLabel value="Estado Civil: " />
+
+			<h:selectOneRadio>
+				<f:selectItem itemValue="S" itemLabel="Solteiro" />
+				<f:selectItem itemValue="C" itemLabel="Casado" />
+				<f:selectItem itemValue="D" itemLabel="Divorciado" />
+				<f:selectItem itemValue="v" itemLabel="Viuvo" />
+			</h:selectOneRadio>
+
+			<h:outputLabel value="UF" />
+			<h:selectOneMenu>
+				<f:selectItem itemValue="RJ" itemLabel="Rio de Janeiro" />
+				<f:selectItem itemValue="SP" itemLabel="São Paulo" />
+				<f:selectItem itemValue="MG" itemLabel="Minas Gerais" />
+				<f:selectItem itemValue="SC" itemLabel="Santa Catarina" />
+			</h:selectOneMenu>
+
+		</h:panelGrid>
+
+		<h:panelGrid columns="4">
+			<h:commandButton value="Gravar" />
+			<h:commandButton value="Busca" />
+			<h:commandButton value="Editar" />
+			<h:commandButton value="Ecluir" />
+			<h:commandLink value="Voltar" />
+		</h:panelGrid>
+
+	</h:form>
+
+</h:body>
+
+</html>
