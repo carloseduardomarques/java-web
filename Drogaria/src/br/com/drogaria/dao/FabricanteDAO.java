@@ -179,7 +179,7 @@ public class FabricanteDAO {
 
 	}
 
-	public ArrayList<Fabricante> lista() throws SQLException {
+	public ArrayList<Fabricante> listar() throws SQLException {
 
 		StringBuilder sql = new StringBuilder();
 
@@ -261,7 +261,7 @@ public class FabricanteDAO {
 		FabricanteDAO fdao = new FabricanteDAO();
 
 		try {
-			ArrayList<Fabricante> lista = fdao.lista();
+			ArrayList<Fabricante> lista = fdao.listar();
 
 			for (Fabricante f : lista) {
 
@@ -280,7 +280,7 @@ public class FabricanteDAO {
 
 		/*
 		 * teste_salvar(); teste_excluir(); teste_editar(); teste_buscar();
-		 teste_retornalista();*/
+		 teste_listar();*/
 
 		
 		teste_buscaPorDescricao();
