@@ -11,7 +11,13 @@ public class ConexaoFactory {
 	private static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 	
 	public static Connection conectar() throws SQLException{
-		
+	
+	try {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+	} catch (ClassNotFoundException e) {
+		e.printStackTrace();
+	}	
 	Connection conexao = DriverManager.getConnection(URL, USUARIO, SENHA);
 
     return conexao;
